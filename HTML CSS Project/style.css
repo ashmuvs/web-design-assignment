@@ -1,0 +1,641 @@
+/* General Styles
+The * selector applies a universal reset to remove default margins and padding and sets the box-sizing to border-box for all elements.
+Sets the default font family.
+Smooth scrolling behavior for the html element.
+Background color and text color for the body element. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+html {scroll-behavior: smooth;}
+
+body {
+    background:#081b29;
+    color: orange;
+}
+
+/* Home Page */
+/* Styles the header section with a full-screen background image and padding. */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(runbg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for the navbar and alignment of items.
+Styling for navigation links and the logo, including hover effects. */
+
+.navbar {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: orange;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 25px;
+    color: rgb(255, 166, 0); 
+    text-decoration:none;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+/* Flexbox layout for the home section, with styling for headings, paragraphs, and buttons. */
+
+.home {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.homecontent {
+    flex-basis: 50%;
+}
+
+h1 {
+    color: orange;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px red;
+}
+
+p {
+    margin-top: 15px;
+    color: beige;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.homecontent .btn-box {
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-box a {
+    margin-top: 30px;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border: 3px solid rgb(53, 221, 221);
+    border-radius: 8px;
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    color:orange;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:hover {
+    color: red;
+    transition: .5s;
+} 
+
+/* The About Page */
+/* Shared header styles for multiple pages.
+Specific styles for the about page, including layout and content formatting. */
+
+.headerabout {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.about {
+    width: 100%;
+    padding: 78px 0px;
+}
+
+.about img {
+    height: 700px;
+    width: auto;
+}
+
+.about-content {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-content h1{
+    color: antiquewhite;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+span {
+    color: red;
+}
+
+.about-content p{
+    color: rgba(240, 221, 240, 0.8);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding-left: 18px;
+}
+
+button {
+    margin-top: 15px;
+    width: 120px;
+    background: transparent;
+    border: 3px solid rgb(53, 221, 221);
+    border-radius: 8px;
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    color:orange;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover{
+    color: red;
+    transition: .5s;
+}
+
+
+/* Gallery Page */
+/* Shared header styles for multiple pages.
+Grid layout for the gallery section, including hover effects for images.
+ */
+
+.headergallery {
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.galleryh1 {
+    margin-top: 10%;
+    color: antiquewhite;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.top:hover {
+    color: red;
+    transition: .5s;
+} 
+
+/* Timetable Page
+Shared header styles for multiple pages.
+Table styling for the timetable page, including header and row formatting.*/
+
+.headertable {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.timeh1 {
+    margin-top: 10%;
+    color: antiquewhite;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: orange;
+    color:antiquewhite;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid antiquewhite;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: rgb(143, 240, 240);
+}
+
+.highlight {
+    color: red;
+}
+
+/* Subscription Page */
+
+.subheader {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.sub {
+    width: 100%;
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px whitesmoke;
+}
+
+.subh1 {
+    margin-top: 10%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: antiquewhite;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px whitesmoke;
+}
+
+.user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n) {
+    justify-content: end;
+}
+
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label{
+    width: 95%;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.user-input-box input{
+    background: black;
+    color: orange;
+    width: 95%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 10px;
+}
+
+.gender-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.gendercat {
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.gendercat label{
+    padding: 0 20px 0 5px;
+    cursor: pointer;
+}
+
+.gendercat input{
+    cursor: pointer;
+}
+
+.submit-btn {
+    margin-top: 40px;
+}
+
+.submit-btn input{
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: orange;
+    background: transparent;
+    letter-spacing: 1px;
+    border: 3px solid rgb(53, 221, 221);
+    font-weight: 600; 
+}
+
+.submit-btn :hover {
+    color: red;
+    transition: .5s;
+} 
+
+/* Contact Page */
+
+.contactheader {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Background.jpg);
+    background-position: center;
+    background-size: cover; 
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.contact-sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    color: whitesmoke;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.contact-info i{
+margin-right: 20px;
+font-size: 25px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin-right: 50px;
+    flex: 1;
+}
+
+.conh1 {
+    font-weight: 600;
+    margin-top: 15%;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.contact-form .txtb{
+    background: black;
+    color: orange;
+    border: 1px solid grey;
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-form .txtb:first-child{
+    margin-right: 15px;
+}
+
+.contact-form textarea{
+    background: black;
+    color: orange;
+    border: 1px solid grey;
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.send-btn {
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: orange;
+    background: transparent;
+    letter-spacing: 1px;
+    border: 3px solid rgb(53, 221, 221);
+    font-weight: 600; 
+}
+
+.send-btn:hover {
+    color: red;
+    transition: .5s;
+} 
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homecontent {
+        flex-basis: 100%;
+    }
+
+    .about-content, .about img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-sec {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .contact-form .txtb:first-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .homecontent .btn-box {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .btn-box a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about-content h1 {
+        font-size: 40px;
+    }
+
+    .about-content p {
+        padding-left: 0;
+    }
+
+    button, .submit-btn input, .send-btn {
+        width: 100%;
+    }
+
+    .contact-form .txtb, .contact-form textarea {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

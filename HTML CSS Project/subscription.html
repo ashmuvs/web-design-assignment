@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ashley Muvimwa">
+    <meta name="description" content="Web design Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Sports Club</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="subheader">
+        <a href="#" class="logo">A.S Club..</a>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="timetable.html">Timetable</a>
+                    </li>
+                    <li>
+                        <a href="subscription.html">Subscription</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="Sub">
+            <h1 class="subh1">Subscription</h1>
+            <form action="#">
+                <div class="user-info">
+                    <div class="user-input-box">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="user-input-box">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="gender">
+                    <span class="gender-title">Gender</span>
+                    <div class="gendercat">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="submit-btn">
+                    <input type="submit" value="Subscribe">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
